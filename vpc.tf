@@ -5,12 +5,16 @@ resource "aws_vpc" "my-vpc" {
   cidr_block = "10.10.0.0/16"
 }
 
+========================================
+
 resource "aws_internet_gateway" "my-igw" {
   vpc_id = aws_vpc.my-vpc.id
   tags = {
     "my-igw" = "my-igw"
   }
 }
+
+=======================================
 
 resource "aws_subnet" "pub-subnet" {
   vpc_id     = aws_vpc.my-vpc.id
