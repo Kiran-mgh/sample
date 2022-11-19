@@ -2,3 +2,7 @@ cd
 ls
 mkdir
 ls -la
+useradd
+username
+sudo
+su
